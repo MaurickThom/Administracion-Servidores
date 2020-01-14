@@ -14,7 +14,25 @@ Las dos distros forman parte deun nodo comun a nivel de repositorios internos qu
 
 ## **Instalación de maquinas viruales con Virtual Box**
 
-.
+```sh
+
+    # para apagar una maquina virtual
+    > shutdown -h now
+
+```
+
+Estos pasos son despues de crear la maquina virtual
+
+- En la configuración de la maquina virtual , en la sección Red cambiar de NAT a Adaptador puente luego en nombre enp4s0
+- En avanzadas, colocar en el Modo promiscuo "Permitir todo" y cable conectado seleccionado
+- En la sección de Storage(almacenamiento) se seleccionará el cd(controlador IDE) que dice "Vacio" , y en el apartado de atributos a la descarga anteriormente.
+  Aceptamos los cambios.(atributos -> unidad Optica -> seleccionamos el documento iso que descargamos -> aceptar)
+- Iniciamos la máquina virtual
+- Si estamos trabajando en un servidor físico, deberiamos seleccionar "Comprobar memoria"
+- Instalación del sistema operativo
+
+Para verificar que un archivo descargado desde internet no está corrupto `sha256sum nombre` el hash resultande debe ser igual al servicio que nos
+otorgó la descaerga
 
 ## **Instalaccion de Ubuntu en docker**
 
@@ -33,7 +51,6 @@ Las dos distros forman parte deun nodo comun a nivel de repositorios internos qu
     # para apagar el contenedor
     > docker stop ID-CONTAINER
 ```
-
 
 ## ***Recursos***
 
