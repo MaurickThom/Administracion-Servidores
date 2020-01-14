@@ -16,4 +16,4 @@ Las dos distros forman parte deun nodo comun a nivel de repositorios internos qu
 
 - [**Diferencia entre ubuntu server y ubuntu desktop**](https://www.solvetic.com/page/recopilaciones/s/ordenadores/diferencias-entre-ubuntu-desktop-escritorio-y-ubuntu-server)
 - [**linux-statistics**](https://w3techs.com/technologies/details/os-linux)
-- [**Linux Fundation**](https://www.linuxfoundation.org/publications/2018/06/open-source-jobs-report-2018/)
+- [**Linux Foundation**](https://www.linuxfoundation.org/publications/2018/06/open-source-jobs-report-2018/)
