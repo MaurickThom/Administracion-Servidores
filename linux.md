@@ -38,7 +38,18 @@
 - `chmod u=rwx,g=rx,o=`
 - `chown nuevousuario *` para cambiar el usaurio de los directorios y archivos de donde nos encontramos
 - `chown -R nuevousuario *` : lo mismo que el anterior de forma recursiva
+- `chmod g=u foobar` copiar los permisos de usuario a grupo  
+
+- `-rw-r--r-- 1 sony sony 3603 Jan 15 16:47 linux.md` : permisos cantidad_de_enlaces_que_tiene usuario grupo file_size .....
+
+![Linux](https://blogcitochia.files.wordpress.com/2017/03/arbol-linux.png?w=775)
 
 **Usuarios y Grupos**
 
+## *Recursos* 
 
+- [En em menu hay posts acerca de linux](https://santi-gf.github.io/)
+- [Particionamiento segun Red Hat](https://access.redhat.com/documentation/es-es/red_hat_enterprise_linux/6/html/installation_guide/s2-diskpartrecommend-x86)
+- [grupos 1](https://eltallerdelbit.com/usuarios-grupos-linux/)
+- [grupos 2](https://expertosdelinux.com/anadir-usuario-grupo-linux/)
+- [Enlaces](https://geekland.eu/que-son-para-que-sirven-enlaces-duros-y-simbolicos/)
