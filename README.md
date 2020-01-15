@@ -59,17 +59,41 @@ contraseña : `*******`
 
 -> hecho
 
-Si queremos que nuestro servidor pueda ser accedido de forma remota debemos instalar OPENSSH
+Si queremos que nuestro servidor pueda ser accedido de forma remota debemos instalar OPENSSH,`thom del futuro no te olvides está parte tienes que instalarlo`
 SSH SETUP
 
 [X] Install OpenShh Server (tecla space)
 Importar la indentidad [No] (con TAB podemos saltar de opciones)
 -> hecho
 
+(no instalamos nada)
 -> hecho
 -> Reiniciar
 
 ### **CentOS**
+
+`thom del futuro fíjate la version - el link es de la version 8.0.1905 tambien recuerda que si descargas la version del link esta pesará 6.6GB ya que incluye una interfaz gráfica`<br>
+Descargamos : GET CentOS Now -> linux DVD iso -> ![descarga](http://mirror.unimagdalena.edu.co/centos/8.0.1905/isos/x86_64/CentOS-8-x86_64-1905-dvd1.iso)
+
+Nueva maquina virtual -> {nombre:thom-server-centos,tipo:linux,version:Red Hat 64-bit} -> siguiente
+-> siguente -> crear ...
+
+configuración -> igual que el ubuntu server
+
+Install Centos8 -> Idioma Aquí a diferencia que en el ubuntu (solo fue en ingles el tecldo) aquí selecionaremos ingles -> continuar
+
+Localization -> Network hot name -> Ethernet (enp0s3) ON -> (cambiar el nombre de host) Host namee : thom-server -> apply -> done
+Installation Destination ->  seleccionamos Local standar disks -> done
+Date Time -> America New York-> done
+Begin Installation
+
+User settings
+
+root password -> `******`
+user creation -> `minitank` -> `*****` -> Done
+
+
+
 
 ## **Instalaccion de Ubuntu en docker**
 
@@ -95,5 +119,6 @@ Importar la indentidad [No] (con TAB podemos saltar de opciones)
 - [**Diferencia entre ubuntu server y ubuntu desktop**](https://www.solvetic.com/page/recopilaciones/s/ordenadores/diferencias-entre-ubuntu-desktop-escritorio-y-ubuntu-server)
 - [**linux-statistics**](https://w3techs.com/technologies/details/os-linux)
 - [**Linux Foundation**](https://www.linuxfoundation.org/publications/2018/06/open-source-jobs-report-2018/)
-- (**Virtual Box**)[https://www.virtualbox.org/wiki/Linux_Downloads]
-- (**Contenedor de Ubuntu**)[https://dockertips.com/ubuntu_1804]
+- [**Virtual Box**](https://www.virtualbox.org/wiki/Linux_Downloads)
+- [**Contenedor de Ubuntu**](https://dockertips.com/ubuntu_1804)
+- [**CentOS**](https://www.muylinux.com/2019/09/24/centos-8-centos-stream/)
