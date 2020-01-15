@@ -20,4 +20,25 @@
     - `ssh username@hosti` para conectarme a una maquina de forma remota y el la otra maquina si tenemos el tail -f veremos en tiempo real
      la información del usuario conectado a nuestra maquina
     - Para leer multiples archivos con tail se usa `/` ejemplos : `tail -f /var/log/auth.log / /var/log/dpkg.log` nos mostrará la termianl partida
-     en dos , haciendo el seguimientos a esos dos archivos
+     en dos , haciendo el seguimientos a esos dos archivosi
+
+**Permisos**
+
+- `sudo chown nuevoUser archivo.txt` : establece que el propietario de archivo sea nuevoUser
+- `sudo chown -R user /var/home` : establece a user cmo propietario de todos los directorios , subdirectorios y archivos dentro del path
+  de forma recursiva , si agregamos el -c `sudo chown -R -c user /var/home` nos informara de los cambios que está hacienod
+- `sudo chown user1:user2 arcchivo.txt` : Lo que hará es que el propietario del archivo sea user1 y el grupo sea user2
+- `sudo chown :user2 archivo`  : agregamos el propietario del grupo
+- `sudo chmod g-w test` quita el permiso de escritura a group de test
+- `chmod =r archivo` elimina todas los permisos de los tres (own group other) y agregar solo escritura a los tres
+- `chmod g-x,o-x archivo` : quita en grupo la ejecución y others tambien
+- `chmod u-x+w archivo` : quita a user la ejecución y agrega la escritura
+- `chmod u=rwx,g=rwx,o=rx archivo`
+- `chmod u=rwx,go=` : chmod 700
+- `chmod u=rwx,g=rx,o=`
+- `chown nuevousuario *` para cambiar el usaurio de los directorios y archivos de donde nos encontramos
+- `chown -R nuevousuario *` : lo mismo que el anterior de forma recursiva
+
+**Usuarios y Grupos**
+
+
