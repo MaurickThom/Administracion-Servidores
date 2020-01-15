@@ -14,6 +14,8 @@ Las dos distros forman parte deun nodo comun a nivel de repositorios internos qu
 
 ## **Instalación de maquinas viruales con Virtual Box**
 
+### **Ubuntu Server**
+
 ```sh
 
     # para apagar una maquina virtual
@@ -21,9 +23,11 @@ Las dos distros forman parte deun nodo comun a nivel de repositorios internos qu
 
 ```
 
+Nuevo-> {nombre:thom-server,tipo:Linux,version:Ubunto 64 bit}
+
 Estos pasos son despues de crear la maquina virtual
 
-- En la configuración de la maquina virtual , en la sección Red cambiar de NAT a Adaptador puente luego en nombre enp4s0
+- En la configuración de la maquina virtual , en la sección Red cambiar de NAT a Adaptador puente ,luego en nombre enp4s0 ( red cableada)
 - En avanzadas, colocar en el Modo promiscuo "Permitir todo" y cable conectado seleccionado
 - En la sección de Storage(almacenamiento) se seleccionará el cd(controlador IDE) que dice "Vacio" , y en el apartado de atributos a la descarga anteriormente.
   Aceptamos los cambios.(atributos -> unidad Optica -> seleccionamos el documento iso que descargamos -> aceptar)
@@ -32,7 +36,40 @@ Estos pasos son despues de crear la maquina virtual
 - Instalación del sistema operativo
 
 Para verificar que un archivo descargado desde internet no está corrupto `sha256sum nombre` el hash resultande debe ser igual al servicio que nos
-otorgó la descaerga
+otorgó la descarga
+
+Cuando lleguemos a la sección de `conecciones de red`
+- seleccionamos enp0s3 eth -> (abrimos) edit IPv4 -> Automatic (DHCP) -> hecho
+
+Si en la organizacion o compañia que estamos trabajando tenemos algun proxy este es el momento preciso para la configuración
+-> hecho
+
+Direccion espejo de ubuntu , el 99% de la veces no debe modificar , si se tiene una conexion muy lenta o algun problema con la descarga de archivos
+se deberia cambiar , pero no es lo ideal -> hecho
+
+Luego se selecciona-> Use An Entire Disk 
+
+Configuracion de sistema de archivos -> saldra el disco que creamos al crear la maquina virtual
+-> Hecho -> continuar 
+
+nombre : thom-server
+nombre del servidor : minitank (este nombre es importante por que nos dirá como entraremos este servidor en la red)
+nombre usuario : minitank
+contraseña : `*******`
+
+-> hecho
+
+Si queremos que nuestro servidor pueda ser accedido de forma remota debemos instalar OPENSSH
+SSH SETUP
+
+[X] Install OpenShh Server (tecla space)
+Importar la indentidad [No] (con TAB podemos saltar de opciones)
+-> hecho
+
+-> hecho
+-> Reiniciar
+
+### **CentOS**
 
 ## **Instalaccion de Ubuntu en docker**
 
@@ -51,6 +88,7 @@ otorgó la descaerga
     # para apagar el contenedor
     > docker stop ID-CONTAINER
 ```
+
 
 ## ***Recursos***
 
