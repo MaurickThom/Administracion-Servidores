@@ -9,20 +9,26 @@
     información es mas legible
 - `du` : Muestra la información sobre el disco duro. Con el modificador `**-hsc**` y un directorio específico
     muestra el tamaño de ese directorio `**du -hsc /home/sony**`
-- `htop`
-
+- `htop` : `sudo apt-get -y install htop` -> cuando ejecutamos el comando `htop` nos mostrará de forma mas detalla los procesos , CPU y RAM que ejecuta el sistema operativo
+   ademas de herramientas para filtrar , ordenar y muchas cosas mas que una interfaz gráfica apunta de botonos y graficas nos proporcionaría .
+ 
 > Si nos interesa conecer la informacion de la CPU `cat /proc/cpuinfo | grep "Processor"` <br>
 > No se encontrará nada ya que la linea de comando de linux son case sensitive  `cat /proc/cpuinfo | grep "processor"` <br>
 > Pero si queremos agregar el ignore case `-i` `cat /proc/cpuinfo | grep -i "Processor"`
 
-- Si queremos conocer que procesos consumen mas CPU se consumen en el sistema operativo
-- `sudo ps aux | sort -nr -k 3 | head -5`
+- Si queremos conocer que procesos consumen más CPU se consumen en el sistema operativo
+- `sudo ps aux | sort -nr -k 3 | head -5` -> `-k` key (%MEM) verifica el numero de columna de ps aux
+
+- Si queremos conocer que procesos consumen más RAM
+- `sudo ps aux | sort -nr -k 4 | head -5`
+
+
 
 **Diferencia entre aux u auxf**
 
 Para maximizar la información que proporciona ps (muestra los procesos actuales del sistema que esten el backgroun hechas por el usuario) se utiliza aux
 pero tambien existe auxf , la diferencia consta que `f` se agrupará como procesos en un árbol de procesos. Personalmente recomiendo aux y no auxf
-ya que para el comando `sudo ps auxf | sort -nr -k 3 | head -5` en algunos casos no podre ver el path padre del procesos que consume mucha memoria
+ya que para el comando `sudo ps auxf | sort -nr -k 3 | head -5` en algunos casos no podre ver el path padre del procesos que consume mucha CPU
 
 - **Estructura del Standard Output `ps`**
     - `USER` : nos dice el usuario del servidor dueño del proceso
