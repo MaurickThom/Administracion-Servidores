@@ -5,7 +5,7 @@
 - Las IPs públicas son la que se asignan a cualquier dispositivo conectado a internet. Por ejemplo los servidores que alojan tus sitios web, el router que te da
      acceso a internet, entre otros.
 - Si el disposituvo tiene una IP pública significa que puede conectarse a otro que también tenga una. Por esto mismo, no puede haber dos dispositivos con la misma IP pública
-- Para encontrar la dirección IP de miestros dispistivos se debe usar lo siguientes comando
+- Para encontrar la dirección IP de nuestros dispostivos se debe usar lo siguientes comandos
     - Linux y Mac : `ifconfig` ó `ip a`
     - Windows : `ipconfig`
 - Para ver el nombre ó identificador de nuestro equipo en todas las redes podemos usar `hostname`
@@ -13,7 +13,17 @@
 - Para identificar las IPs de diferentes dominios podemos usar el comando `nslookup nombre_dominio.ext`
     - `nslookup localhost`
     - `nslookup platzi.com`
-- `curl ipconfig.me`
+- `curl ifconfig.me` : Nos proporsiona nuestra IP pública
+- Opciones para obtener nuestra IP privada
+    - `ifconfig` -> en el apartado  de inet(IPv4) xxx.xxx.x.xxx  -> x = numeros, init6(IPv6)
+    - `ip route`
+    - O irse a la configuración de la red y ver la direccion IPv4
+- Opciones para obtener nuestra IP pública
+    - `curl ifconfig.me`
+    - `curl ifconfig.co`
+    - `curl icanhazip.com`
+    - `wget -qO- ifconfig.co/ip`
+    - `wget -qO- http://ipecho.net/plain`
 
 
 
