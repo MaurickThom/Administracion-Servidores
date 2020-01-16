@@ -63,16 +63,48 @@ Cada usuario activo en nuestro sistema operativo crea una una conexión . Podemo
 (este ultimo nos da un poco más de información) .
 
 Podemos ver todos los procesos que corren en el background que el usuario actual ejecutó `ps`
-Para poder filtrar los procesos y ver únicamente las conexiones de los usuarios usamos `ps -ft tty`
+Para poder filtrar los procesos y ver únicamente las conexiones de los usuarios usamos `ps -ft tty1`
 
 Consolas físicas tendrán una numeración de tty1 ... tty6
 
-- `chvt 1` - chvt n cambiar de consola
+- `sudo chvt 3` - chvt n cambiar de consola
 - `tty` para ver en que terminal estoy
 - `w` verificar que terminales estan abiertas y sus usuarios
 - `who` ver las conexiones
 - `kill id` matar a un procesos y pide confirmación
 - `kill -9 id` mata sin confirmación
+- tambien puedo conectarme a mi propia maquina estando en mi maquina `ssh localhost`
+
+- `/dev/pts/` contiene las terminales virtuales del sistema operativo
+
+Ahora imaginemos que hay un usuario conectado a nuestro sistema que no queremos que este conectado :
+
+- `ps -A` lista todos los procesos tantos los del usuarios como del sistema
+
+- primero consultamos para obtener su PID `ps -ft tty1`
+- luego procedemos con la eliminación `kill -9 PID`
+
+**Manejo y monitoreo de procesos y recursos del sistema**
+
+Para poder identificar los procesos que se esten ejecutando en nuestro sistema operativo `ps`
+
+- `ps aux` : procesos corriendo en el sistema operativo
+- `ps aux | grep algunnombre` : `ps aux | grep 'sony' | more`
+- `vim algo &` `jobs` o `ps` luego `fg`
+- `nohup ./script.sh` generera un archivo nohup.out donde estará el output del proceso ./script.sh
+
+**Stream**
+
+Los canales de datos son muy necesarios al momento de concatenar comandos y al programar en shell scripting
+
+- Standar Input : es la entrada de datos a nuestro de nuestro programa , pero solo en tiempo de ejecución
+- Standar Output
+- Standar Error
+
+` history >> ~/Desktop/output/ultimos_comandos.txt`<br>
+` grep < ~/Desktop/output/ultimos_comandos.txt "rm"` este comando lo que hara es buscar todos los comandos que se eliminaron
+Con ese signo lo que hacemos es que el que el standar input de grep sea el archivo y apartir de eso ya puede hacer la busqueda de "rm"
+`history | grep "rm"` ese `|` pipe pasara el output de history al i put de grep , el orden siempre será de izquierda a derecha
 
 ## *Recursos* 
 
