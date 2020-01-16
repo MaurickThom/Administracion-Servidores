@@ -44,7 +44,35 @@
 
 ![Linux](https://blogcitochia.files.wordpress.com/2017/03/arbol-linux.png?w=775)
 
+> FHS (FileSystem Hierarchy Standard) estandar de directorios que utilizan los sistemas operativos linux y los derivados de unix
+
 **Usuarios y Grupos**
+
+.
+
+**Terminales en linux**
+
+Las distribuciónes de linux para servidores no incluyen interfaz gráfica, ya que consumen muchos recursos.Esto significa
+que vamos a trabajar desde la terminal
+
+Tendremos disponibles 6 terminales virtuales a las que podemos entrar o salir con las teclas `CTRL + ALT + Fx` (ojo thom no te olvides el idioma 
+del teclado tiene que estar necesariamente en ingles) ese `x` significa que puede ser F1,F2 ...`CTRL+ALT+F1` . También podemos usar el comando
+`chvt` . La septima terminal es la terminal gráfica
+
+Cada usuario activo en nuestro sistema operativo crea una una conexión . Podemos ver todas estas conexiones con los comandos `who` y `w`
+(este ultimo nos da un poco más de información) .
+
+Podemos ver todos los procesos que corren en el background que el usuario actual ejecutó `ps`
+Para poder filtrar los procesos y ver únicamente las conexiones de los usuarios usamos `ps -ft tty`
+
+Consolas físicas tendrán una numeración de tty1 ... tty6
+
+- `chvt 1` - chvt n cambiar de consola
+- `tty` para ver en que terminal estoy
+- `w` verificar que terminales estan abiertas y sus usuarios
+- `who` ver las conexiones
+- `kill id` matar a un procesos y pide confirmación
+- `kill -9 id` mata sin confirmación
 
 ## *Recursos* 
 
@@ -53,3 +81,4 @@
 - [grupos 1](https://eltallerdelbit.com/usuarios-grupos-linux/)
 - [grupos 2](https://expertosdelinux.com/anadir-usuario-grupo-linux/)
 - [Enlaces](https://geekland.eu/que-son-para-que-sirven-enlaces-duros-y-simbolicos/)
+- [Arbol de directorios - detallado](https://www.taringa.net/+linux/el-arbol-de-directorios-de-linux-al-detalle-que_hmjsk)
