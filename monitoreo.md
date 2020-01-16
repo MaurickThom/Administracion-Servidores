@@ -1,4 +1,4 @@
-**Momitore de recursos del sistema**
+**Monitoreo de recursos del sistema**
 
 - `top` : interfaz gráfica que nos muestra la informaión especifica del sistema operativo
     - `load average` muestra la carga promedio, provee una representación del 1 al número de 
