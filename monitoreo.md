@@ -24,7 +24,7 @@ Para maximizar la información que proporciona ps (muestra los procesos actuales
 pero tambien existe auxf , la diferencia consta que `f` se agrupará como procesos en un árbol de procesos. Personalmente recomiendo aux y no auxf
 ya que para el comando `sudo ps auxf | sort -nr -k 3 | head -5` en algunos casos no podre ver el path padre del procesos que consume mucha memoria
 
-- **Estructura del Standar Output `ps`**
+- **Estructura del Standard Output `ps`**
     - `USER` : nos dice el usuario del servidor dueño del proceso
     - `PID` : Process ID en el servidor , se puede utilizar para matar el proceso
     - `%CPU` : porcentaje del CPU que usa el proceso
