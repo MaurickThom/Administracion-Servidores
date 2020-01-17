@@ -71,6 +71,12 @@ con `dpkg-reconfigure` pero primero vemos el nombre del paquete (este paso es op
 
 `sudo pkg-reconfigure nombre-paquete`
 
+En Debian existe otro nuevo gestor de paquetes llamado `snap`
+
+- `sudo snap search aws-cli` : buscar paquetes con snap
+- `sudo snap refresh --list` : ver todos nuestros paquetes
+- `sudo snap info aws-cli` : verificar la informacion de un apquete especifico
+
 ### **Recursos**
 
 - [Direcciones](https://ubunlog.com/direccion-ip-publica-privada/)
