@@ -32,7 +32,44 @@
 
 **Administración de paquetes acorde a la distribución**
 
+- Red hat / CenOS / Fedora
+    - `.rpm` : red hat package management
+    - Repositorios `yum`
+- Debian / Ubuntu
+    - `.deb`
+    - `dpkg-reconfigure`
+    - repositorios `apt`
 
+**Red Hat Package Management**
+
+- Base de datos RPM : localizada en `/var/lib/rpm`
+- `rpm -qa` : Listar todos los rpms instalados en la maquina
+- `rpm -i paquete.rpm` : realizar instalación de un paquete
+- `rpm -e paquete.rpm` : remover un paquete del sistema
+
+- El comando `yum` : nos permite instalar un paquete desde un repositorio sin tener que conocer la ruta del archivo o las dependencias
+ - `yum install paquete`
+
+**Debian package Management**
+
+- Base de datos DPKG : localizada en  /var/lib/dpkg
+- `dpkg -l` : lista toddos los archivos debs instalados en la maquina
+- `dpkg -i paquete.deb` Realiza instalación de un paquete
+- `dpkg -r paquete.deb` Remover un paquete del sistema
+
+**Diferencia entre apt-get pdate y apt-get upgrade**
+
+- `sudo apt-get update` : Actualiza la lista de paquetes disponibles  y sus versiones, pero no instala o actualiza ningun paquete
+- `sudo apt-get upgrade` : iUna ves digitado el comando anterior que descargará las actualizaciones . podemos mejorar los paquetes que ya teniamos disponibles
+  y actulizarlos. Instalará las nuevas versiones respetando la configuración  del software  cuando sea posible
+
+- Para buscar los paquetes a instalar `sudo apt search "mysql"` `sudo apt search "expresion regex"`
+- Otra forma de buscar paquetes es con `sudo apt-cache search "mysql-server$"`
+
+Imaginemos que configuramos mal un paquete, entonces para no tener que desintalar y luego instalar podemos reconfigurar
+con `dpkg-reconfigure` pero primero vemos el nombre del paquete (este paso es opcional, ya que podemos saber el nombre del paquete) `dpkg -l`
+
+`sudo pkg-reconfigure nombre-paquete`
 
 ### **Recursos**
 
