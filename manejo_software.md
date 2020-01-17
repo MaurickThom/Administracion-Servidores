@@ -28,7 +28,10 @@
 > ifconfig : interface config<br>
 > ip a  : ip adress show <br>
 - ip -4 a : nos muestra todas las IPv4 que tiene nuestro servidor <br>
-- ip -6 a : nos muestra todas las IPv6 que tiene nustro servidor <br>
+- ip -6 a : nos muestra todas las IPv6 que tiene nuestro servidor <br>
+
+**Administración de paquetes acorde a la distribución**
+
 
 
 ### **Recursos**
