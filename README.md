@@ -113,6 +113,17 @@ user creation -> `minitank` -> `*****` -> Done
     > docker stop ID-CONTAINER
 ```
 
+## **Recordatorio**
+
+Antes de descargar una version de algun software debemos verificar si tiene soporte a largo tiemo (LTS), ya
+que esta nos brindará soporte por 5 años, mientras que las que tienen ese tipo de soporte solo contaremos con
+actualizaciones por 9 meses.
+
+Centos es una derivada de RedHat, para poder utilizar Redhat es necesario comprar la licencia, pero para
+Centos no.
+
+Redhat para aplicaciones empresariales
+Ubuntu server para deplegar sitios web.
 
 ## ***Recursos***
 
