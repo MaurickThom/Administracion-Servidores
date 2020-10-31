@@ -47,7 +47,7 @@ Instalación de Nagios
 Descomprimir y desempaquetar archivos con tar
 
 ```shell
-  > tar xvzf nagioscore.tar.gz
+  > tar xvzf nagioscore.tar.gz (que me lo extraiga,ver el log,descomprime, y el archivo)
 ```
 
 Este comando creará una carpeta nagios-4.4.4. El nombre de la carpeta puede variar dependiendo de la versión que descargaste. Entrando a esta carpeta podemos ejecutar diferentes archivos y comandos para configurar el software y realizar la instalación.
