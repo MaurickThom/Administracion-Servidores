@@ -22,6 +22,7 @@ function assert_is_installed { # esta funcion solo se encargara de preguntar si 
     # Exit code 0        Success
     # Exit code 1        General errors
 		exit 1
+  fi
 }
 
 function log_error {
@@ -42,6 +43,32 @@ function run {
 	assert_is_installed "gzip"
 	assert_is_installed "aws"
 }
+function make_backup {
+	local BAK="$(echo $HOME/mysql)"
+	local MYSQL="$(which mysql)"
+	local MYSQLDUMP="$(which mysqldump)"
+	local GZIP="$(which gzip)"
+	local NOW="$(date +"+%d-%m-%Y")"
+	local BUCKET="xxxxx"
+
+	USER="xxxxxx"
+	PASS="xxxxxx"
+	HOST="xxxxxx"
+	DATABASE="xxxxxx"
+
+	[! -d "$BAK" ] && mkdir -p "$BAK"
+
+	FILE=$BAK/$DATABASE.$NOW-$(date +"%T").gz
+	local SECONDS=0
+
+	$MYSQLDUMP --single-transaction --set-gtid-purged=OFF -u $USER -p $PASS -h $HOST $DATABASE | $GZIP -9 > $FILE
+
+	duration=$SECONDS
+	echo "$($duration / 60) minutes"
+	aws s3 cp $BAK "s3://$BUCKET" --recursive
+}
 
 run
 make_backup
+
+# https://blog.desdelinux.net/como-ofuscar-u-ocultar-codigo-de-nuestros-scripts-bash/
