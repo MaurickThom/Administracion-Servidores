@@ -22,7 +22,10 @@
 - Si queremos conocer que procesos consumen más RAM
 - `sudo ps aux | sort -nr -k 4 | head -5`
 
-
+- ps aux : procesos que corren en el sistema operativo
+- ps aux | grep thom : procesos del usuario thom
+- nohup ./script.sh => lo que hara es que generará un archivo nohub.out donde almacenara el output del ejecutable,
+    esto muy util cuando genero despligue en servidores
 
 **Diferencia entre aux u auxf**
 

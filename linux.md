@@ -66,6 +66,9 @@ Podemos ver todos los procesos que corren en el background que el usuario actual
 Para poder filtrar los procesos y ver únicamente las conexiones de los usuarios usamos `ps -ft tty1`
 
 Consolas físicas tendrán una numeración de tty1 ... tty6
+la terminal tty7 esta desarrollada para la interfaz gráfica
+
+`tty` entrada y salida de texto
 
 - `sudo chvt 3` - chvt n cambiar de consola
 - `tty` para ver en que terminal estoy
@@ -83,6 +86,8 @@ Ahora imaginemos que hay un usuario conectado a nuestro sistema que no queremos 
 
 - primero consultamos para obtener su PID `ps -ft tty1`
 - luego procedemos con la eliminación `kill -9 PID`
+
+Estos son terminales virtuales
 
 **Manejo y monitoreo de procesos y recursos del sistema**
 
