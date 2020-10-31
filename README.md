@@ -23,26 +23,46 @@ Las dos distros forman parte deun nodo comun a nivel de repositorios internos qu
 
 ```
 
-Nuevo-> {nombre:thom-server,tipo:Linux,version:Ubunto 64 bit}
+> Thom recuerda que lo hiciste en Virtual Box
 
-Estos pasos son despues de crear la maquina virtual
+Nuevo-> {nombre:thom-server,tipo:Linux,version:Ubuntu 64 bit} : luego siguiente
+Luego elegimos el tamaño de la memoria (1GB esta bien)
+Luego seleccionamos "crear un disco duro virtual ahora" : luego crear
+Luego seleccionamos "VHI (Virtual Hard Image)"
+luego "reservado dinamicamente"
+Luego descargamos la imagen  ISO de ubuntu server (asegurar instalar la version LTS)
+
+Estos pasos son despues de crear la maquina virtual, para configurar los parametros de la RED
 
 - En la configuración de la maquina virtual , en la sección Red cambiar de NAT a Adaptador puente ,luego en nombre enp4s0 ( red cableada)
 - En avanzadas, colocar en el Modo promiscuo "Permitir todo" y cable conectado seleccionado
 - En la sección de Storage(almacenamiento) se seleccionará el cd(controlador IDE) que dice "Vacio" , y en el apartado de atributos a la descarga anteriormente.
   Aceptamos los cambios.(atributos -> unidad Optica -> seleccionamos el documento iso que descargamos -> aceptar)
 - Iniciamos la máquina virtual
-- Si estamos trabajando en un servidor físico, deberiamos seleccionar "Comprobar memoria"
+- Si estamos trabajando en un servidor físico, deberiamos seleccionar "Comprobar memoria", es decir si no esta
+  en una maquina virtual
 - Instalación del sistema operativo
 
 Para verificar que un archivo descargado desde internet no está corrupto `sha256sum nombre` el hash resultande debe ser igual al servicio que nos
 otorgó la descarga
 
+esto se hace fuera de la maquina virtual
+
+```sh
+  # verificar que no hubo errores al descargar el iso
+  > sha256sum ubuntui-server-18.iso
+  # esto debe coincidir con el hash que me recomienda la página
+  # https://ubuntu.com/download/server -> You can verify your download , or get help on installing.
+```
+
+lo que sigue solo es la configuracion del idioma y el teclado, podemos seleccionar cualquier idioma y en
+el apartado del teclado es recomendable el idioma ingles
+
 Cuando lleguemos a la sección de `conecciones de red`
 - seleccionamos enp0s3 eth -> (abrimos) edit IPv4 -> Automatic (DHCP) -> hecho
 
-Si en la organizacion o compañia que estamos trabajando tenemos algun proxy este es el momento preciso para la configuración
--> hecho
+Si en la organizacion o compañia que estamos trabajando en algun proxy este es el momento preciso para la configuración
+-> hecho (en mi caso no tengo ninguno)
 
 Direccion espejo de ubuntu , el 99% de la veces no debe modificar , si se tiene una conexion muy lenta o algun problema con la descarga de archivos
 se deberia cambiar , pero no es lo ideal -> hecho
@@ -76,7 +96,7 @@ Importar la indentidad [No] (con TAB podemos saltar de opciones)
 Descargamos : GET CentOS Now -> linux DVD iso -> ![descarga](http://mirror.unimagdalena.edu.co/centos/8.0.1905/isos/x86_64/CentOS-8-x86_64-1905-dvd1.iso)
 
 Nueva maquina virtual -> {nombre:thom-server-centos,tipo:linux,version:Red Hat 64-bit} -> siguiente
--> siguente -> crear ...
+-> siguente -> crear ... (igual que el anterior)
 
 configuración -> igual que el ubuntu server
 
@@ -91,9 +111,6 @@ User settings
 
 root password -> `******`
 user creation -> `minitank` -> `*****` -> Done
-
-
-
 
 ## **Instalaccion de Ubuntu en docker**
 
@@ -133,3 +150,4 @@ Ubuntu server para deplegar sitios web.
 - [**Virtual Box**](https://www.virtualbox.org/wiki/Linux_Downloads)
 - [**Contenedor de Ubuntu**](https://dockertips.com/ubuntu_1804)
 - [**CentOS**](https://www.muylinux.com/2019/09/24/centos-8-centos-stream/)
+- [**Ubuntu release cycle**](https://ubuntu.com/about/release-cycle)
