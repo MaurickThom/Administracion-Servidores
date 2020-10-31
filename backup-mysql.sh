@@ -1,7 +1,9 @@
 #!/bin/bash
 # Shell script para obtener una copia desde MySQL
 
+# este script se llamara desde un crontab, ejecutara el script cada x tiempo, este path es para ver desde donde se ejecutará el script
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+# definicion de todas las rutas donde solo se puede ejecutar el script
 
 set -e # detendrá la ejecución del script por si hay alguna falla
 
