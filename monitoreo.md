@@ -115,8 +115,10 @@ sudo systemctl restart nagios
 
     En nuestro home, descargar el plugin de MySQL
 
-wget https://labs.consol.de/assets/downloads/nagios/check_mysql_health-2.2.2.tar.gz -O mysqlplugin.tar.gz
+
+wget https://nagios-plugins.org/download/nagios-plugins-2.2.1.tar.gz -O plugins.tar.gz
 
     Desempaquetar y descomprimir el archivo del plugin
 
-tar xzvf mysqlplugin.tar.gz
+tar xzvf plugins.tar.gz
+
