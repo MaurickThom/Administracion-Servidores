@@ -66,3 +66,5 @@ service amplify-agent start
 Reiniciar Nginx
 
 sudo systemctl restart nginx
+
+> https://docs.bluehosting.cl/tutoriales/servidores/como-configurar-nginx-para-obtener-un-rendimiento-optimo.html
