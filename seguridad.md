@@ -82,3 +82,8 @@ sudo ufw reset, para borrar las reglas
   > sudo apt install lynix -y
   > sudo lynis audit system #  Realiza un escaneo del sistema operativo, mostrándonos sugerencias y el estado de peligro de ciertos detalles en nuestra distribución
 ```
+
+Escaneo de puertos con NMAP y NIKTO desde Kali Linux
+
+- nmap -sV -sC -0 -oA nombre_de_archivo dirección_ip_del_servidor: Realiza un mapeo de la red
+- nikto -h ip_del_host -o nombre_de_archivo: Escanea vulnerabilidades en un servidor
